@@ -1,0 +1,12 @@
+<table>
+    <thead>
+        <th>Customer name</th>
+        <th>Total Orders</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of getCustomerOrders()">
+            <td>{{customer.username}}</td>
+            <td>{{customer.orders}}</td>
+        </tr>
+    </tbody>
+</table>

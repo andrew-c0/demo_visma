@@ -1,0 +1,16 @@
+<div class="create-account-wrapper">
+    <label>
+        Your username
+        <input type="text" [(ngModel)]="createAccountData.username">
+    </label>
+    <label>
+        Your password:
+        <input type="text" [(ngModel)]="createAccountData.password">
+    </label>
+    <label>
+        Confirm password:
+        <input type="text" [(ngModel)]="createAccountData.confirmPassword">
+    </label>
+    <button (click)="createAccount()">Create account</button>
+    <a routerLink="/login">Do you have an account? Login</a>
+</div>

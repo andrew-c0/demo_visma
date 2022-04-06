@@ -1,0 +1,45 @@
+.minicart-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background: white;
+    border-left: 1px solid black;
+
+    transition: ease-in-out 0.3s width;
+    z-index: 1;
+
+    &.closed {
+        width: 0;
+        * {
+            display: none;
+
+            &.toggleCartButton {
+                display: block;
+            }
+        }
+    }
+
+    .cart-table {
+        width: 100%;
+        td, tr, th {
+            border: 1px solid black;
+        }
+    }
+
+    .toggleCartButton {
+        font-size: 30px;
+        border: 0;
+        padding: 10px 20px;
+
+        position: absolute;
+        bottom: 80px;
+        left: -80px;
+        transform: scaleX(1);
+
+        &.isActive {
+            transform: scaleX(-1);
+        }
+    }
+}

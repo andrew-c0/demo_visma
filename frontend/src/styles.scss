@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+table {
+    width: 100%;
+    td, tr, th {
+        border: 1px solid black;
+    }
+}

@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+.create-account-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    input, button {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+}

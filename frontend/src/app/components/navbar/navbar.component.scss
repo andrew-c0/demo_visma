@@ -1,0 +1,36 @@
+.app-nav {
+    * {
+        box-sizing: border-box;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: salmon;
+    padding: 20px 10px;
+
+    div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    a {
+        display: block;
+        margin-right: 20px;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    button {
+        background: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 15px;
+        cursor: pointer;
+    }
+}

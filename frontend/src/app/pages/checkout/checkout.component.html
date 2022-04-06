@@ -1,0 +1,21 @@
+<table class="cart-table">
+    <thead>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngIf="cartItems.length == 0">
+            <td colspan="3">No products in cart.</td>
+        </tr>
+        <tr *ngFor="let cartItem of cartItems">
+            <td>{{cartItem.product.name}}</td>
+            <td>{{cartItem.quantity}}</td>
+            <td>{{cartItem.subtotal}}</td>
+        </tr>
+        <tr *ngIf="cartItems.length > 0">
+            Total: {{cartSubtotal()}}
+        </tr>
+    </tbody>
+</table>
+<button *ngIf="cartItems.length > 0 " (click)="finishOrder()">Complete order</button>

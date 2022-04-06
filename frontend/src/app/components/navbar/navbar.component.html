@@ -1,0 +1,16 @@
+<nav class="app-nav">
+    <div *ngIf="isAuth">
+        <a routerLink="/store">Store</a>
+        <a routerLink="/catalogue">Catalogue</a>
+        <a routerLink="/customers">Customers</a>
+        <a routerLink="/rebates">Rebates</a>
+        <a routerLink="/reports">Reports</a>
+    </div>
+    <div *ngIf="!isAuth">
+        <a routerLink="/login">Login</a>
+        <a routerLink="/create-account">Create account</a>
+    </div>
+    <div *ngIf="isAuth">
+        <button (click)="logout()">Log me out</button>
+    </div>
+</nav>

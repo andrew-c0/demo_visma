@@ -1,0 +1,10 @@
+<div class="login-wrapper">
+    <label>Username:
+        <input type="text" name="username" [(ngModel)]="loginCredentials.username" placeholder="Your username">
+    </label>
+    <label>Password:
+        <input type="password" name="password" [(ngModel)]="loginCredentials.password" placeholder="Your password">
+    </label>
+    <button type="button" (click)="logUser()">Log In</button>
+    <a routerLink="/create-account">Create account</a>
+</div>

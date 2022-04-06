@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <th>Based on</th>
+        <th>Criteria</th>
+        <th>Value to compare to</th>
+        <th>Rebate percentage</th>
+        <th>Product specific?</th>
+        <th>Product applied to</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rebate of rebatesList">
+            <td>{{rebate.rebateSubject}}</td>
+            <td>{{rebate.rebateCriteria}}</td>
+            <td>{{rebate.rebateValue}}</td>
+            <td>{{rebate.rebatePercentage}}</td>
+            <td>{{rebate.productSpecific ? 'Yes' : 'No'}}</td>
+            <td>{{rebate.productRebate ? rebate.productRebate : 'N/A'}}</td>
+        </tr>
+    </tbody>
+</table>

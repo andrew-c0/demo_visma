@@ -1,0 +1,21 @@
+<div class="categories">
+    <a *ngFor="let category of productCategories" routerLink="/store/{{category}}">
+        {{category | titlecase}}
+    </a>
+</div>
+<table class="store-table">
+    <thead>
+        <tr>
+            <th>Product name</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td><button (click)="addToCart(product)">Add to cart</button></td>
+        </tr>
+    </tbody>
+</table>
