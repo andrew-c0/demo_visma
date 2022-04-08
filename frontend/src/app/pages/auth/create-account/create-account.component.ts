@@ -11,9 +11,11 @@ import { AuthService } from './../../../services/auth/auth.service';
 export class CreateAccountComponent implements OnInit {
 
   createAccountData: newAccount = {
+    fullname: '',
     username: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    is_client: false
   }
 
   constructor(private authService: AuthService, private router: Router) { }

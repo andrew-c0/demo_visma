@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +9,6 @@ import { CreateAccountComponent } from './pages/auth/create-account/create-accou
 import { StoreComponent } from './pages/store/store.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ReportsComponent } from './pages/reports/reports.component';
-import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { MiniCartComponent } from './components/mini-cart/mini-cart.component';
 import { RebatesComponent } from './pages/rebates/rebates.component';
 import { CustomersComponent } from './pages/customers/customers.component';
@@ -27,7 +27,6 @@ import { ProductsService } from './services/products/products.service';
     StoreComponent,
     CheckoutComponent,
     ReportsComponent,
-    CatalogueComponent,
     MiniCartComponent,
     RebatesComponent,
     CustomersComponent,
@@ -37,7 +36,8 @@ import { ProductsService } from './services/products/products.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     CartService,

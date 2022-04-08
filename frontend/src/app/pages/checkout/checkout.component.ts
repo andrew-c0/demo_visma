@@ -26,7 +26,7 @@ export class CheckoutComponent implements OnInit {
       return 0;
     }
     let total = 0;
-    this.cartItems.forEach(el => total += el.product.realPrice || el.product.price);
+    this.cartItems.forEach(el => total += el.product.price);
     return total;
   }
 

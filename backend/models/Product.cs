@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using FurnitureRebate.Models;
+using FurnitureOrder.Models;
 
 namespace FurnitureProduct.Models
 {

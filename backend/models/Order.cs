@@ -13,8 +13,8 @@ namespace FurnitureOrder.Models
     public class Order
     {
         public int id {get; set;}
-        public User? user {get; set;}
-        public OrderStatus? current_status {get; set;}
+        public int user {get; set;}
+        public int current_status {get; set;}
         public DateTime created_at {get; set;}
         public DateTime updated_at {get; set;}
     }
@@ -22,8 +22,8 @@ namespace FurnitureOrder.Models
     public class OrderLine
     {
         public int id {get; set;}
-        public Order? order {get; set;}
-        public Product? product {get; set;}
+        public int order {get; set;}
+        public int product {get; set;}
         public int quantity {get; set;}
         public float finalPrice {get; set;}
     }

@@ -17,32 +17,6 @@ namespace backend.Migrations.RebateDbMigrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
 
-            modelBuilder.Entity("FurnitureProduct.Models.Product", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("category")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("created_at")
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("is_active")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("name")
-                        .HasColumnType("TEXT");
-
-                    b.Property<float?>("price")
-                        .HasColumnType("REAL");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Product");
-                });
-
             modelBuilder.Entity("FurnitureRebate.Models.Rebate", b =>
                 {
                     b.Property<int>("id")
@@ -58,10 +32,10 @@ namespace backend.Migrations.RebateDbMigrations
                     b.Property<float>("percentage")
                         .HasColumnType("REAL");
 
-                    b.Property<bool>("product_specific")
+                    b.Property<int>("product")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("productid")
+                    b.Property<bool>("product_specific")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("subject")
@@ -72,18 +46,7 @@ namespace backend.Migrations.RebateDbMigrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("productid");
-
                     b.ToTable("Rebate");
-                });
-
-            modelBuilder.Entity("FurnitureRebate.Models.Rebate", b =>
-                {
-                    b.HasOne("FurnitureProduct.Models.Product", "product")
-                        .WithMany()
-                        .HasForeignKey("productid");
-
-                    b.Navigation("product");
                 });
 #pragma warning restore 612, 618
         }

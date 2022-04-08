@@ -2,13 +2,14 @@
     <a *ngFor="let category of productCategories" routerLink="/store/{{category}}">
         {{category | titlecase}}
     </a>
+    <a routerLink="/store" class="reset-filters">Reset filters</a>
 </div>
 <table class="store-table">
     <thead>
         <tr>
             <th>Product name</th>
             <th>Price</th>
-            <th></th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -19,3 +20,22 @@
         </tr>
     </tbody>
 </table>
+<button (click)="toggleProductForm()">{{displayProductForm ? 'Cancel' : 'Create product'}}</button>
+<div *ngIf="displayProductForm">
+    <p>
+        To add a new product, complete the inputs below.
+    </p>
+    <label>
+        Product name
+        <input type="text" [(ngModel)]="addProduct.name" placeholder="Product name">
+    </label>
+    <label>
+        Product price
+        <input type="number" [(ngModel)]="addProduct.price" placeholder="number / float">
+    </label>
+    <label>
+        Product category
+        <input type="text" [(ngModel)]="addProduct.category" placeholder="Product category">
+    </label>
+    <button (click)="createProduct()">Add product</button>
+</div>

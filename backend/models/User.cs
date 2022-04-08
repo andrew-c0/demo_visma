@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using FurnitureOrder.Models;
 
 namespace FurnitureUser.Models
 {
@@ -11,12 +12,6 @@ namespace FurnitureUser.Models
         public bool is_client {get; set;}
         public DateTime created_at {get; set;}
         public bool is_active {get; set;}
-    }
-
-    public class LoginUser
-    {   
-        public string username {get; set;}
-        public string password {get; set;}
     }
 
     class UserDb : DbContext

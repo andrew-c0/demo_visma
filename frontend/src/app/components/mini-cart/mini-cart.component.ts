@@ -29,7 +29,7 @@ export class MiniCartComponent implements OnInit {
       return 0;
     }
     let total = 0;
-    this.cartItems.forEach(el => total += el.product.realPrice || el.product.price);
+    this.cartItems.forEach(el => total += el.product.price * el.quantity);
     return total;
   }
 

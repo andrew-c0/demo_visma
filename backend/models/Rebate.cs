@@ -10,7 +10,7 @@ namespace FurnitureRebate.Models
         public float value {get; set;}
         public float percentage {get; set;}
         public bool product_specific {get; set;}
-        public Product? product {get; set;}
+        public int product {get; set;}
         public string? category_rebate {get; set;}
         public DateTime created_at {get; set;}
     }
